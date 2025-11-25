@@ -3,12 +3,12 @@ name: Availability Kolkata
 on:
   schedule:
     - cron: '0 */2 * * *'  # Runs every 2 hours
-
   workflow_dispatch:
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
+
     steps:
       # Step 1: Setup SSH
       - name: Setup SSH
@@ -48,7 +48,7 @@ jobs:
       # Step 5: Install Python dependencies
       - name: Install Python dependencies
         run: |
-          cd availability_kolkata_pvt
+          cd Availability_Kolkata_pvt
           pip install -r requirements.txt
 
       # Step 6: Run your scraper from the private repo
