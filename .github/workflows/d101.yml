@@ -44,13 +44,13 @@ jobs:
           unzip chromedriver.zip
           sudo mv chromedriver-linux64/chromedriver /usr/local/bin/chromedriver
           sudo chmod +x /usr/local/bin/chromedriver
-
+    
       # Step 5: Install Python dependencies
       - name: Install Python dependencies
         run: |
           cd Availability_Kolkata_pvt
           pip install -r requirements.txt
-
+      
       # Step 6: Run your scraper from the private repo
       - name: Run scraping script
         env:
@@ -58,3 +58,4 @@ jobs:
         run: |
           cd Availability_Kolkata_pvt
           python availability_kolkata_pvt.py
+
